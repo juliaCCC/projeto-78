@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto 78</title>
+</head>
+<body>
+    <center style="margin-top:40px;"> 
+    <h1> Minhas Galinhas </h1>
+<img src="galo.jpeg" style="width: 30%" id="cocorico">
+<h4 id="nomes"> Roberto Carlos </h4>
+<button onclick="update();"> próximo </button>
+    </center>
+    <script>
+        var imagens = ["galo.jpeg", "galinha1.jpeg", "galinha2.jpeg"];
+        var nomes = ["roberto carlos", "claúdia", "laís"];
+        var i = 0;
+        
+        function update() {
+            i++;
+            if (i > 2) {
+                i = 0;
+            }
+            
+            var updateimagem = imagens[i];
+            var updatenomes = nomes[i];
+            document.getElementById("cocorico").src = updateimagem;
+            document.getElementById("nomes").innerHTML = updatenomes;
+        }
+    </script>
+</body>
+</html>
